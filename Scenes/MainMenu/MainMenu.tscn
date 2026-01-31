@@ -1,40 +1,53 @@
 [gd_scene format=3 uid="uid://dqbek33etvi0x"]
 
 [ext_resource type="Script" uid="uid://bq8w5c2ayan0d" path="res://Scenes/MainMenu/MainMenuScale.gd" id="1_cdkru"]
+[ext_resource type="Texture2D" uid="uid://be0vpsuasso8f" path="res://Assets/background.jpg" id="2_c7oo3"]
 
 [node name="MainMenu" type="Control" unique_id=578298888]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_right = 150.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_cdkru")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877783487]
-custom_minimum_size = Vector2(300, 300)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=184360510]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c7oo3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877783487]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -150.0
-offset_right = 150.0
-offset_bottom = 150.0
+offset_left = -65.0
+offset_top = -64.0
+offset_right = 65.0
+offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1352513306]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=982173185]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
+alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=701927454]
 layout_mode = 2
@@ -42,14 +55,14 @@ text = "GROW GROW UP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1981064072]
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1981064072]
 layout_mode = 2
 text = "Начать игру"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=433304958]
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=433304958]
 layout_mode = 2
 text = "Настройки"
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=116376473]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=116376473]
 layout_mode = 2
 text = "Выход"

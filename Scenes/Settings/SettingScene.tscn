@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://cr6tcqlhi8k35"]
+
+[ext_resource type="Script" uid="uid://bq8w5c2ayan0d" path="res://Scenes/MainMenu/MainMenuScale.gd" id="1_fvril"]
+[ext_resource type="Texture2D" uid="uid://be0vpsuasso8f" path="res://Assets/background.jpg" id="2_taggm"]
+
+[node name="MainMenu" type="Control" unique_id=578298888]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_fvril")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=184360510]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_taggm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877783487]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.344
+anchor_top = 0.22200002
+anchor_right = 0.656
+anchor_bottom = 0.77800006
+offset_left = -0.32000732
+offset_top = 0.1599884
+offset_right = 0.3199463
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1352513306]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=982173185]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=701927454]
+layout_mode = 2
+text = "НАСТРОЙКИ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2038047761]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=920582086]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "ЗВУК:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=831271674]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1489897756]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=261527372]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "МУЗЫКА:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1108575606]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1507392467]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1399970953]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "ЭФФЕКТЫ:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1922170139]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1261568121]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1605275032]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "КАЧЕСТВО:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=2029106944]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=654861152]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1402885000]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Применить"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1089030795]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Сбросить"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1868533290]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Вернуться"

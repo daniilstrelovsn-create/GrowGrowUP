@@ -1,29 +1,14 @@
-# Godot 4+ specific ignores
-.godot/
-.nomedia
-
-# Godot-specific ignores
-.import/
+# Godot 4 специфичное
+*.import/
 export.cfg
-export_credentials.cfg
+export_presets.cfg
+.godot/
 
-# Imported translations (automatically generated from CSV files)
-*.translation
+# ОС специфичное
+.DS_Store
+Desktop.ini
+Thumbs.db
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
-
-# Игнорируем скомпилированные файлы (опционально, но рекомендуется)
-*.a
-*.so
-*.pck
-*.exe
-
-# Игнорируем системные файлы
-*.orig
+# Временные файлы
 *~
-
-# Игнорируем настройки редактора (у каждого могут быть свои)
-editor_layout.cfg
+*.tmp

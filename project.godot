@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="GrowGrowUp"
+run/main_scene="uid://dqbek33etvi0x"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/ExportMedia/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/borderless=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 

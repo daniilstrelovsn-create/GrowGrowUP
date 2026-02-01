@@ -2,11 +2,11 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var color_rect: ColorRect = $ColorRect
-@onready var settings_button: Button = $MarginContainer/VBoxContainer/SettingsButton
-@onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
-@onready var exit_button: Button = $MarginContainer/VBoxContainer/ExitButton
+#@onready var settings_button: Button = $MarginContainer/VBoxContainer/SettingsButton
+#@onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
+@onready var back_button: Button = $MarginContainer/VBoxContainer/HBoxContainer5/BackButton
 
-const SETTINGS_SCENE_PATH = "res://Scenes/Settings/SettingScene.tscn"
+const SETTINGS_SCENE_PATH = "res://Scenes/MainMenu/MainMenu.tscn"
 
 func _ready():
 	# Анимация
@@ -14,10 +14,8 @@ func _ready():
 	animation_player.play("fade_out")
 	await animation_player.animation_finished
 	color_rect.visible = false
-	
-	settings_button.pressed.connect(_on_settings_button_pressed)
-	#start_button.pressed.connect(_on_start_button_pressed)
-	#exit_button.pressed.connect(_on_exit_button_pressed)
+
+	back_button.pressed.connect(_on_settings_button_pressed)
 
 	# НЕ ТРОГАТЬ ЭТО SCALE
 	var window = get_tree().root

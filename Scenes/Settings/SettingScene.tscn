@@ -116,7 +116,7 @@ alignment = 1
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_vertical = 0
-text = "ЗВУК:"
+text = "МУЗЫКА:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -134,7 +134,7 @@ alignment = 1
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_vertical = 0
-text = "МУЗЫКА:"
+text = "ЭФФЕКТЫ:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -152,7 +152,7 @@ alignment = 1
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_vertical = 0
-text = "ЭФФЕКТЫ:"
+text = "PHOLDER:"
 horizontal_alignment = 1
 vertical_alignment = 1
 

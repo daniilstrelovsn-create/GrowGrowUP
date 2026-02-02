@@ -34,12 +34,13 @@ func _ready():
 func _on_window_resized():
 	print("Размер окна изменен: ", get_tree().root.size)
 	
+func _on_settings_button_pressed() -> void:
+	MusicManager.instance.play_button_click()
+	transition_to(SETTINGS_SCENE_PATH)
+	
 func transition_to(scene_path: String):
 	color_rect.visible = true
 	animation_player.play("fade_in")
 	await animation_player.animation_finished
 	color_rect.visible = false
 	get_tree().change_scene_to_file(scene_path)
-
-func _on_settings_button_pressed() -> void:
-	transition_to(SETTINGS_SCENE_PATH)

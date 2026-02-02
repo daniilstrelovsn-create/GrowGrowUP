@@ -9,6 +9,7 @@ extends Control
 const SETTINGS_SCENE_PATH = "res://Scenes/Settings/SettingScene.tscn"
 
 func _ready():
+	MyMusicManager.play_track("main_menu", 1.0)
 	# Анимация
 	color_rect.visible = true
 	animation_player.play("fade_out")

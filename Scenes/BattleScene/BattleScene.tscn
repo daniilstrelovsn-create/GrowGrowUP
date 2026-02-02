@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bqn0alsmxryns"]
+
+[ext_resource type="Texture2D" uid="uid://b15mixtlkkfk1" path="res://Assets/avatar.png" id="1_pgu3g"]
+
+[node name="BattleScene" type="Control" unique_id=694751503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1928742438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=90938635]
+
+[node name="TopBar" type="HBoxContainer" parent="UI" unique_id=681063247]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="BattleArea" type="MarginContainer" parent="." unique_id=1037852294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="BattleArea" unique_id=318747414]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CharacterHeader" type="HBoxContainer" parent="BattleArea/LeftPanel" unique_id=1552200653]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="BattleArea/LeftPanel/CharacterHeader" unique_id=466528636]
+layout_mode = 2
+texture = ExtResource("1_pgu3g")
+
+[node name="NameLabel" type="Label" parent="BattleArea/LeftPanel/CharacterHeader" unique_id=303587176]
+layout_mode = 2
+text = "Name"
+
+[node name="StatsPanel" type="VBoxContainer" parent="BattleArea/LeftPanel" unique_id=920390593]
+layout_mode = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="BattleArea/LeftPanel/StatsPanel" unique_id=870114809]
+layout_mode = 2
+
+[node name="ManaBar" type="TextureProgressBar" parent="BattleArea/LeftPanel/StatsPanel" unique_id=941855401]
+layout_mode = 2
+
+[node name="PhisicalArmor" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=2040459825]
+layout_mode = 2
+text = "Физическая броня:"
+
+[node name="MagicArmor" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=494503342]
+layout_mode = 2
+text = "Магическая броня: "
+
+[node name="BlockChance" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=62624021]
+layout_mode = 2
+text = "Шанс блока: "
+
+[node name="DodgeChance" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=1029064118]
+layout_mode = 2
+text = "Шанс уорота:"
+
+[node name="Initiative" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=964739918]
+layout_mode = 2
+text = "Инициатива:"
+
+[node name="CritalChance" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=2007187887]
+layout_mode = 2
+text = "Шанс крита:"
+
+[node name="CritMulriplier" type="Label" parent="BattleArea/LeftPanel/StatsPanel" unique_id=235907627]
+layout_mode = 2
+text = "Модификатор крита:"
+
+[node name="GridContainer" type="GridContainer" parent="BattleArea/LeftPanel" unique_id=1368564190]
+layout_mode = 2
+columns = 2
+
+[node name="TextureButton" type="TextureButton" parent="BattleArea/LeftPanel/GridContainer" unique_id=1632952617]
+layout_mode = 2

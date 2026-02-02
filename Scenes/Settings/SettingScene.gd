@@ -8,14 +8,6 @@ extends Control
 const SETTINGS_SCENE_PATH = "res://Scenes/MainMenu/MainMenu.tscn"
 
 func _ready():
-	# Анимация
-	color_rect.visible = true
-	animation_player.play("fade_out")
-	await animation_player.animation_finished
-	color_rect.visible = false
-
-	back_button.pressed.connect(_on_settings_button_pressed)
-
 	# Инициализация слайдера музыки
 	if music_slider:
 		# Настраиваем диапазон слайдера (0-100 для процентов)
@@ -30,6 +22,14 @@ func _ready():
 		music_slider.value_changed.connect(_on_music_slider_changed)
 	else:
 		print("⚠️ music_slider не найден! Проверь путь к ноду.")
+
+	# Анимация
+	color_rect.visible = true
+	animation_player.play("fade_out")
+	await animation_player.animation_finished
+	color_rect.visible = false
+
+	back_button.pressed.connect(_on_settings_button_pressed)
 
 	# НЕ ТРОГАТЬ ЭТО SCALE
 	var window = get_tree().root

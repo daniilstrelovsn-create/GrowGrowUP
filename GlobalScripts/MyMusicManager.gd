@@ -16,7 +16,8 @@ var GlobalAudio = {
 
 # Словарь с музыкальными треками
 var music_tracks: Dictionary = {
-	"main_menu": "res://Music/main_menu.ogg"
+	"main_menu": "res://Music/main_menu.ogg",
+	"main_game": "res://Music/main_game.ogg"
 }
 
 # Словарь с UI звуками

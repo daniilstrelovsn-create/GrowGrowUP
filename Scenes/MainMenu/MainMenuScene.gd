@@ -7,6 +7,7 @@ extends Control
 @onready var exit_button: Button = $MarginContainer/VBoxContainer/ExitButton
 
 const SETTINGS_SCENE_PATH = "res://Scenes/Settings/SettingScene.tscn"
+const BATTLE_SCENE_PATH = "res://Scenes/BattleScene/BattleScene.tscn"
 
 func _ready():
 	MyMusicManager.play_track("main_menu", 1.0)
@@ -17,7 +18,7 @@ func _ready():
 	color_rect.visible = false
 	
 	settings_button.pressed.connect(_on_settings_button_pressed)
-	#start_button.pressed.connect(_on_start_button_pressed)
+	start_button.pressed.connect(_on_start_button_pressed)
 	#exit_button.pressed.connect(_on_exit_button_pressed)
 
 	# НЕ ТРОГАТЬ ЭТО SCALE
@@ -37,6 +38,10 @@ func _on_window_resized():
 func _on_settings_button_pressed() -> void:
 	MusicManager.instance.play_button_click()
 	transition_to(SETTINGS_SCENE_PATH)
+	
+func _on_start_button_pressed() -> void:
+	MusicManager.instance.play_button_click()
+	transition_to(BATTLE_SCENE_PATH)
 	
 func transition_to(scene_path: String):
 	color_rect.visible = true

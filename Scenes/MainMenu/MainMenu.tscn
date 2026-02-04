@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqbek33etvi0x"]
 
-[ext_resource type="Script" uid="uid://bq8w5c2ayan0d" path="res://Scenes/MainMenu/MainMenuScale.gd" id="1_cdkru"]
+[ext_resource type="Script" uid="uid://bq8w5c2ayan0d" path="res://Scenes/MainMenu/MainMenuScene.gd" id="1_cdkru"]
 [ext_resource type="Texture2D" uid="uid://be0vpsuasso8f" path="res://Assets/background.jpg" id="2_c7oo3"]
 
 [sub_resource type="Animation" id="Animation_c7oo3"]

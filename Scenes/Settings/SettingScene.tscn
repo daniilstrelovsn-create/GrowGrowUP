@@ -106,13 +106,31 @@ text = "НАСТРОЙКИ"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2038047761]
+[node name="MasterSoundsHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1507392467]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=920582086]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MasterSoundsHBox" unique_id=1399970953]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 0
+text = "ОБЩАЯ:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterSoundsHSlider" type="HSlider" parent="MarginContainer/VBoxContainer/MasterSoundsHBox" unique_id=1922170139]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="MusicHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2038047761]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MusicHBox" unique_id=920582086]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_vertical = 0
@@ -120,17 +138,17 @@ text = "МУЗЫКА:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=831271674]
+[node name="MusicHSlider" type="HSlider" parent="MarginContainer/VBoxContainer/MusicHBox" unique_id=831271674]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1489897756]
+[node name="UISoundsHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1489897756]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=261527372]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/UISoundsHBox" unique_id=261527372]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_vertical = 0
@@ -138,25 +156,7 @@ text = "ЭФФЕКТЫ:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1108575606]
-custom_minimum_size = Vector2(200, 30)
-layout_mode = 2
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1507392467]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1399970953]
-custom_minimum_size = Vector2(100, 30)
-layout_mode = 2
-size_flags_vertical = 0
-text = "PHOLDER:"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1922170139]
+[node name="UISoundHSlider" type="HSlider" parent="MarginContainer/VBoxContainer/UISoundsHBox" unique_id=1108575606]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 
@@ -178,24 +178,19 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=654861152]
+[node name="ButtinsHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=654861152]
 custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1402885000]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-text = "Применить"
-
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1089030795]
+[node name="ResetButton" type="Button" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=1089030795]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 text = "Сбросить"
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1868533290]
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=1868533290]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 text = "Вернуться"

@@ -1,7 +1,48 @@
-[gd_scene format=3 uid="uid://cr6tcqlhi8k35"]
+[gd_scene format=4 uid="uid://cr6tcqlhi8k35"]
 
 [ext_resource type="Script" uid="uid://b4kr1vev5yoka" path="res://Scenes/Settings/SettingScene.gd" id="1_4g3q7"]
 [ext_resource type="Texture2D" uid="uid://be0vpsuasso8f" path="res://Assets/background.jpg" id="2_taggm"]
+[ext_resource type="Texture2D" uid="uid://chxcwxy2qxh7x" path="res://Assets/UI/Banners/Banner.png" id="3_dwtlk"]
+[ext_resource type="Texture2D" uid="uid://36kxio57g7wd" path="res://Assets/UI/Buttons/Reset_Button_Enable.png" id="4_qsuie"]
+[ext_resource type="Texture2D" uid="uid://dctu5qu64abdc" path="res://Assets/UI/Buttons/Reset_Button_Disable.png" id="5_1ie2y"]
+[ext_resource type="Texture2D" uid="uid://drsegi5fqccxg" path="res://Assets/UI/Buttons/Back_Button_Enable.png" id="6_nt2l4"]
+[ext_resource type="Texture2D" uid="uid://byj0dcgu1h3wr" path="res://Assets/UI/Buttons/Back_Button_Disable.png" id="7_58jud"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jy6ia"]
+texture = ExtResource("3_dwtlk")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+4:6/0 = 0
+4:7/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+10:2/0 = 0
+5:2/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+10:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2f4ku"]
+sources/0 = SubResource("TileSetAtlasSource_jy6ia")
 
 [sub_resource type="Animation" id="Animation_c7oo3"]
 length = 0.001
@@ -90,8 +131,13 @@ offset_bottom = -0.16003418
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1352513306]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=684988987]
 layout_mode = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="MarginContainer/TextureRect" unique_id=2063599636]
+position = Vector2(0, 12)
+tile_map_data = PackedByteArray("AAAMAAQAAAAEAAAAAAAQAAQAAAAEAAAAAAAUAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAEAAQAAAAEAAAAAAAYAAQAAAAKAAAAAAAAAAQAAAAAAAAAAAAAAAgAAAAAAAIAAAAYAAgAAAAKAAIAAAAYAAwAAAAKAAIAAAAYABAAAAAKAAIAAAAAAAwAAAAAAAIAAAAAABAAAAAAAAIAAAAAABQAAAAAAAQAAAAEABQAAAABAAQAAAAIABQAAAACAAQAAAAMABQAAAAEAAQAAAAYABQAAAAKAAQAAAAUABQAAAAJAAQAAAAQABQAAAAIAAQAAAAYABgAAAAKAAUAAAAUABgAAAAJAAUAAAAQABgAAAAIAAUAAAAAABgAAAAAAAUAAAAEABgAAAABAAUAAAAIABgAAAACAAUAAAAEAAgAAAAFAAIAAAAEAAwAAAAFAAIAAAAEABAAAAAFAAIAAAAIAAgAAAAFAAIAAAAMAAgAAAAFAAIAAAAQAAgAAAAFAAIAAAAUAAgAAAAFAAIAAAAUAAwAAAAFAAIAAAAUABAAAAAFAAIAAAAQABAAAAAFAAIAAAAMABAAAAAFAAIAAAAIABAAAAAFAAIAAAAIAAwAAAAFAAIAAAAMAAwAAAAFAAIAAAAQAAwAAAAFAAIAAAA=")
+tile_set = SubResource("TileSet_2f4ku")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=982173185]
 custom_minimum_size = Vector2(300, 300)
@@ -99,12 +145,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=701927454]
-layout_mode = 2
-text = "НАСТРОЙКИ"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MasterSoundsHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1507392467]
 layout_mode = 2
@@ -185,15 +225,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 alignment = 1
 
-[node name="ResetButton" type="Button" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=1089030795]
-custom_minimum_size = Vector2(120, 0)
+[node name="ResetButton" type="TextureButton" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=139600332]
 layout_mode = 2
-text = "Сбросить"
+texture_normal = ExtResource("4_qsuie")
+texture_pressed = ExtResource("5_1ie2y")
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=1868533290]
-custom_minimum_size = Vector2(120, 0)
+[node name="BackButton" type="TextureButton" parent="MarginContainer/VBoxContainer/ButtinsHBox" unique_id=1496952561]
 layout_mode = 2
-text = "Вернуться"
+texture_normal = ExtResource("6_nt2l4")
+texture_pressed = ExtResource("7_58jud")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=87948609]
 layout_mode = 1

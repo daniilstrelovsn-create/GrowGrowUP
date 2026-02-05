@@ -1,7 +1,48 @@
-[gd_scene format=3 uid="uid://dqbek33etvi0x"]
+[gd_scene format=4 uid="uid://dqbek33etvi0x"]
 
 [ext_resource type="Script" uid="uid://bq8w5c2ayan0d" path="res://Scenes/MainMenu/MainMenuScene.gd" id="1_cdkru"]
 [ext_resource type="Texture2D" uid="uid://be0vpsuasso8f" path="res://Assets/background.jpg" id="2_c7oo3"]
+[ext_resource type="Texture2D" uid="uid://chxcwxy2qxh7x" path="res://Assets/UI/Banners/Banner.png" id="3_8qovt"]
+[ext_resource type="Texture2D" uid="uid://djcvpm1eogsr2" path="res://Assets/UI/Buttons/Button_Enable.png" id="4_0hjx5"]
+[ext_resource type="Texture2D" uid="uid://kewen3f0ee1c" path="res://Assets/UI/Buttons/Button_Disable.png" id="5_fv0xt"]
+[ext_resource type="Texture2D" uid="uid://p3510ynumnij" path="res://Assets/UI/Buttons/Settings_Button_Enable.png" id="5_vapy7"]
+[ext_resource type="Texture2D" uid="uid://sbx112p1h588" path="res://Assets/UI/Buttons/Settings_Button_Disable.png" id="6_8qovt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hjx5"]
+texture = ExtResource("3_8qovt")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:2/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+0:7/0 = 0
+2:6/0 = 0
+2:7/0 = 0
+4:6/0 = 0
+4:7/0 = 0
+6:6/0 = 0
+6:7/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+10:2/0 = 0
+5:2/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+10:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fv0xt"]
+sources/0 = SubResource("TileSetAtlasSource_0hjx5")
 
 [sub_resource type="Animation" id="Animation_c7oo3"]
 length = 0.001
@@ -91,8 +132,12 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1352513306]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1770589645]
 layout_mode = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="MarginContainer/TextureRect" unique_id=499729715]
+tile_map_data = PackedByteArray("AAAJAAwAAAAFAAIAAAAKAAwAAAAFAAIAAAALAAwAAAAFAAIAAAAMAAwAAAAFAAIAAAANAAwAAAAFAAIAAAANABAAAAAIAAQAAAANABQAAAAIAAUAAAAOAAwAAAAFAAIAAAAPAAwAAAAFAAIAAAAQAAwAAAAFAAIAAAARAAwAAAAFAAIAAAAEAAgAAAAAAAAAAAAEAAwAAAAAAAIAAAAEABAAAAAAAAQAAAAEABQAAAAAAAUAAAAIAAgAAAAEAAAAAAAIAAwAAAAFAAIAAAAIABAAAAABAAQAAAAIABQAAAABAAUAAAAMAAgAAAAEAAAAAAAMABAAAAACAAQAAAAMABQAAAACAAUAAAAQAAgAAAAEAAAAAAAQABAAAAAJAAQAAAAQABQAAAAJAAUAAAAUAAgAAAAKAAAAAAAUAAwAAAAKAAIAAAAUABAAAAAKAAQAAAAUABQAAAAKAAUAAAA=")
+tile_set = SubResource("TileSet_fv0xt")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=982173185]
 custom_minimum_size = Vector2(300, 300)
@@ -101,23 +146,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=701927454]
+[node name="StartButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=388425775]
 layout_mode = 2
-text = "GROW GROW UP"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_0hjx5")
+texture_pressed = ExtResource("5_fv0xt")
+stretch_mode = 0
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1981064072]
+[node name="SettingsButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=129429184]
 layout_mode = 2
-text = "Начать игру"
-
-[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=433304958]
-layout_mode = 2
-text = "Настройки"
-
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=116376473]
-layout_mode = 2
-text = "Выход"
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_vapy7")
+texture_pressed = ExtResource("6_8qovt")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=999482218]
 layout_mode = 1

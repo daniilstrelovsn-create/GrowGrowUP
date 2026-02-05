@@ -2,9 +2,9 @@ extends Control
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var color_rect: ColorRect = $ColorRect
-@onready var settings_button: Button = $MarginContainer/VBoxContainer/SettingsButton
-@onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
-@onready var exit_button: Button = $MarginContainer/VBoxContainer/ExitButton
+@onready var start_button: BaseButton = $MarginContainer/VBoxContainer/StartButton
+@onready var settings_button: BaseButton = $MarginContainer/VBoxContainer/SettingsButton
+#@onready var exit_button: BaseButton = $MarginContainer/VBoxContainer/ExitButton
 
 const SETTINGS_SCENE_PATH = "res://Scenes/Settings/SettingScene.tscn"
 const BATTLE_SCENE_PATH = "res://Scenes/BattleScene/BattleScene.tscn"

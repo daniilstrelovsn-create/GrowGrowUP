@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b15mixtlkkfk1"
-path="res://.godot/imported/avatar.png-ee9a0dd1b67343c45526984db1a3322b.ctex"
+uid="uid://dctu5qu64abdc"
+path="res://.godot/imported/Reset_Button_Disable.png-382b873d40bc29490fc3f6c9b05420f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/avatar.png"
-dest_files=["res://.godot/imported/avatar.png-ee9a0dd1b67343c45526984db1a3322b.ctex"]
+source_file="res://Assets/UI/Buttons/Reset_Button_Disable.png"
+dest_files=["res://.godot/imported/Reset_Button_Disable.png-382b873d40bc29490fc3f6c9b05420f8.ctex"]
 
 [params]
 

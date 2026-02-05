@@ -5,8 +5,8 @@ extends Control
 @onready var master_sounds_slider: HSlider = $MarginContainer/VBoxContainer/MasterSoundsHBox/MasterSoundsHSlider
 @onready var music_slider: HSlider = $MarginContainer/VBoxContainer/MusicHBox/MusicHSlider
 @onready var ui_slider: HSlider = $MarginContainer/VBoxContainer/UISoundsHBox/UISoundHSlider
-@onready var reset_button: Button = $MarginContainer/VBoxContainer/ButtinsHBox/ResetButton
-@onready var back_button: Button = $MarginContainer/VBoxContainer/ButtinsHBox/BackButton
+@onready var reset_button: BaseButton = $MarginContainer/VBoxContainer/ButtinsHBox/ResetButton
+@onready var back_button: BaseButton = $MarginContainer/VBoxContainer/ButtinsHBox/BackButton
 
 const SETTINGS_SCENE_PATH = "res://Scenes/MainMenu/MainMenu.tscn"
 
